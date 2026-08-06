@@ -44,7 +44,7 @@ public abstract class AbstractDonkeyEntityMixin extends AbstractHorse {
             int healthValue = Math.round(this.getMaxHealth());
             int strengthValue = 3 * this.getInventoryColumns();
 
-            Minecraft.getInstance().execute(() -> Minecraft.getInstance().setScreen(
+            Minecraft.getInstance().execute(() -> Minecraft.getInstance().setScreenAndShow(
                     new ToolTipGui(new TooltipDonkey(speedValue, jumpValue, healthValue, strengthValue))
             ));
         }

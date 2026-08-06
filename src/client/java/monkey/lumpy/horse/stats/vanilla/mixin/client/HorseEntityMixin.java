@@ -39,7 +39,7 @@ public abstract class HorseEntityMixin extends AbstractHorse {
             double speedValue = Math.round(speedRaw * 10.0) / 10.0;
             int healthValue = Math.round(this.getMaxHealth());
 
-            Minecraft.getInstance().execute(() -> Minecraft.getInstance().setScreen(
+            Minecraft.getInstance().execute(() -> Minecraft.getInstance().setScreenAndShow(
                     new ToolTipGui(new Tooltip(speedValue, jumpValue, healthValue))
             ));
         }
